@@ -1,19 +1,36 @@
 package com.fermin2049.trabajopractico3.ui.List;
 
+import android.app.Application;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ListViewModel extends ViewModel {
+import com.fermin2049.trabajopractico3.Model.Note;
 
-    private final MutableLiveData<String> mText;
+import java.util.ArrayList;
+import java.util.List;
 
-    public ListViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+public class ListViewModel extends AndroidViewModel {
+
+    private MutableLiveData<List<Note>> notes;
+
+    public ListViewModel(@NonNull Application application) {
+        super(application);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+
+    public LiveData<List<Note>> getNotes() {
+        return notes;
+    }
+
+    public void addNote(Note note) {
+        List<Note> currentNotes = notes.getValue();
+        if (currentNotes != null) {
+            currentNotes.add(note);
+            notes.setValue(currentNotes);
+        }
     }
 }
