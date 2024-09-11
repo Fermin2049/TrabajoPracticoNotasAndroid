@@ -6,21 +6,22 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
 import com.fermin2049.trabajopractico3.Model.Note;
+import com.fermin2049.trabajopractico3.Model.NoteAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListViewModel extends AndroidViewModel {
 
-    private MutableLiveData<List<Note>> notes;
+    private final MutableLiveData<List<Note>> notes;
 
     public ListViewModel(@NonNull Application application) {
         super(application);
+        // Inicializar la lista de notas
+        notes = new MutableLiveData<>(new ArrayList<>());
     }
-
 
     public LiveData<List<Note>> getNotes() {
         return notes;
@@ -30,7 +31,7 @@ public class ListViewModel extends AndroidViewModel {
         List<Note> currentNotes = notes.getValue();
         if (currentNotes != null) {
             currentNotes.add(note);
-            notes.setValue(currentNotes);
+            notes.setValue(new ArrayList<>(currentNotes));  // Crear una nueva lista para notificar a los observadores
         }
     }
 }

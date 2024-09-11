@@ -22,5 +22,10 @@
         android:name="com.fermin2049.trabajopractico3.ui.List.ListFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/nav_leave"
+        android:name="com.fermin2049.trabajopractico3.ui.Leave.LeaveFragment"
+        android:label="@string/menu_leave"
+        tools:layout="@layout/fragment_leave" />
 
 </navigation>

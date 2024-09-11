@@ -17,6 +17,7 @@ import com.fermin2049.trabajopractico3.Model.NoteAdapter;
 import com.fermin2049.trabajopractico3.databinding.FragmentListBinding;
 import com.fermin2049.trabajopractico3.ui.carry.CarryViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListFragment extends Fragment {
@@ -47,9 +48,8 @@ public class ListFragment extends Fragment {
         carryViewModel.getNotes().observe(getViewLifecycleOwner(), new Observer<List<Note>>() {
             @Override
             public void onChanged(List<Note> notes) {
-                if (noteAdapter != null) {
-                    noteAdapter.submitList(notes);  // Actualizar el adaptador con la lista de notas
-                }
+
+                noteAdapter.submitList(notes);  // Actualizar el adaptador con la lista de notas
             }
         });
 

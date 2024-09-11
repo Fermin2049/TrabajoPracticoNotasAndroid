@@ -2,74 +2,81 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:layout_marginBottom="8dp"
             android:text="Contenido de la Nota"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
         <EditText
             android:id="@+id/editTextContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
             android:hint="Escribe el contenido aquí"
             android:inputType="textMultiLine"
             android:minLines="3"
             android:padding="8dp"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Fecha de Creación"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
         <EditText
             android:id="@+id/editTextCreationDate"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
             android:clickable="true"
             android:focusable="false"
             android:hint="Selecciona una fecha"
             android:padding="8dp"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Fecha de Fin"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="25dp" />
 
         <EditText
             android:id="@+id/editTextEndDate"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
             android:clickable="true"
             android:focusable="false"
             android:hint="Selecciona una fecha"
             android:padding="8dp"
-            android:textColor="#000000" />
+            android:textColor="@color/black" />
 
         <Button
             android:id="@+id/buttonSaveNote"

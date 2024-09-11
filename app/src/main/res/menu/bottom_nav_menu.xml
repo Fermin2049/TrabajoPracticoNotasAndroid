@@ -3,15 +3,20 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/home"
-        android:title="Home" />
+        android:title="Inicio" />
 
     <item
         android:id="@+id/nav_carry"
         android:icon="@drawable/carry"
-        android:title="Carry" />
+        android:title="Cargar" />
 
     <item
         android:id="@+id/nav_list"
         android:icon="@drawable/list"
-        android:title="List" />
+        android:title="Lista" />
+
+    <item
+        android:id="@+id/nav_leave"
+        android:icon="@drawable/leave"
+        android:title="Salir" />
 </menu>
